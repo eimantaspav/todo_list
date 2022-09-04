@@ -1,0 +1,123 @@
+/* ---------------- */
+/* Reset            */
+/* ---------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100hv;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make forms easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: #100f0f;
+  color: #e2dcc8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-bottom: 15rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+input {
+  min-width: 25rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  width: 27rem;
+}
+
+.delete {
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #0f3d3e;
+  border-radius: 4px;
+}
+
+.form-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
