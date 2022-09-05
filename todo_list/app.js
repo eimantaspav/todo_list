@@ -1,6 +1,9 @@
+// variables
 const addForm = document.querySelector(".add");
 const list = document.querySelector(".todos");
+const searchInput = document.querySelector(".search input");
 
+// create task li
 const generateTemplate = (todo) => {
   const html = ` <li class="list-group-item">
           <span>${todo}</span>
@@ -27,4 +30,20 @@ list.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
   }
+});
+
+// filter tasks and add or remove hidden class
+const filterTodos = (term) => {
+  Array.from(list.children)
+    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) => todo.classList.add("hidden"));
+  Array.from(list.children)
+    .filter((todo) => todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) => todo.classList.remove("hidden"));
+};
+
+// search event
+searchInput.addEventListener("keyup", () => {
+  const term = searchInput.value.trim();
+  filterTodos(term);
 });

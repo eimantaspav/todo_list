@@ -70,12 +70,11 @@ body {
   background-color: #100f0f;
   color: #e2dcc8;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .container {
-  margin-bottom: 15rem;
+  margin-top: 6rem;
 }
 
 .title {
@@ -120,4 +119,8 @@ li {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.hidden {
+  display: none !important;
 }
